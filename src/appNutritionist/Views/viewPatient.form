@@ -156,7 +156,7 @@
       <SubComponents>
         <Component class="javax.swing.JButton" name="alimentBt">
           <Properties>
-            <Property name="label" type="java.lang.String" value="Aliment"/>
+            <Property name="text" type="java.lang.String" value="Aliment"/>
             <Property name="name" type="java.lang.String" value="alimentBt" noResource="true"/>
           </Properties>
           <AuxValues>
@@ -242,9 +242,6 @@
             <Property name="text" type="java.lang.String" value="Insert"/>
             <Property name="name" type="java.lang.String" value="insertBt" noResource="true"/>
           </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton3ActionPerformed"/>
-          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jButton4">
           <Properties>
@@ -255,7 +252,6 @@
         <Component class="javax.swing.JButton" name="jButton5">
           <Properties>
             <Property name="text" type="java.lang.String" value="Delete"/>
-            <Property name="toolTipText" type="java.lang.String" value=""/>
             <Property name="name" type="java.lang.String" value="deleteBt" noResource="true"/>
           </Properties>
         </Component>

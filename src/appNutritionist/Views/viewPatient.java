@@ -1,12 +1,6 @@
-
 package appNutritionist.Views;
 
-import java.awt.event.ActionEvent;
-
-
 public class viewPatient extends javax.swing.JFrame {
-    
-    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(viewPatient.class.getName());
 
     /**
      * Creates new form viewPatient
@@ -49,7 +43,7 @@ public class viewPatient extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        alimentBt.setLabel("Aliment");
+        alimentBt.setText("Aliment");
         alimentBt.setName("alimentBt"); // NOI18N
 
         jLabel1.setText("Patients");
@@ -83,13 +77,11 @@ public class viewPatient extends javax.swing.JFrame {
 
         jButton3.setText("Insert");
         jButton3.setName("insertBt"); // NOI18N
-        jButton3.addActionListener(this::jButton3ActionPerformed);
 
         jButton4.setText("Modify");
         jButton4.setName("modifyBt"); // NOI18N
 
         jButton5.setText("Delete");
-        jButton5.setToolTipText("");
         jButton5.setName("deleteBt"); // NOI18N
 
         jTextField8.setName("idTx"); // NOI18N
@@ -206,38 +198,6 @@ public class viewPatient extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ReflectiveOperationException | javax.swing.UnsupportedLookAndFeelException ex) {
-            logger.log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> new viewPatient().setVisible(true));
-        
-    }
-    
-    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton alimentBt;
