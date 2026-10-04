@@ -159,9 +159,6 @@
             <Property name="text" type="java.lang.String" value="Aliment"/>
             <Property name="name" type="java.lang.String" value="alimentBt" noResource="true"/>
           </Properties>
-          <AuxValues>
-            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
-          </AuxValues>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel1">
           <Properties>
@@ -173,9 +170,6 @@
             <Property name="text" type="java.lang.String" value="Diets"/>
             <Property name="name" type="java.lang.String" value="dietsBt" noResource="true"/>
           </Properties>
-          <AuxValues>
-            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
-          </AuxValues>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel2">
           <Properties>

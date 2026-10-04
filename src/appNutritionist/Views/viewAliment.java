@@ -35,10 +35,10 @@ public class viewAliment extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        patientBt = new javax.swing.JButton();
         jTextField2 = new javax.swing.JTextField();
         jTextField1 = new javax.swing.JTextField();
-        jButton2 = new javax.swing.JButton();
+        dietsBt = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -65,15 +65,15 @@ public class viewAliment extends javax.swing.JFrame {
 
         jLabel2.setText("Aliment");
 
-        jButton1.setText("Patient");
-        jButton1.setName("patientBt"); // NOI18N
+        patientBt.setText("Patient");
+        patientBt.setName("patientBt"); // NOI18N
 
         jTextField2.setName("categoryTx"); // NOI18N
 
         jTextField1.setName("alimentTx"); // NOI18N
 
-        jButton2.setText("Diets");
-        jButton2.setName("dietsBt"); // NOI18N
+        dietsBt.setText("Diets");
+        dietsBt.setName("dietsBt"); // NOI18N
 
         jLabel1.setText("Aliment");
 
@@ -83,11 +83,11 @@ public class viewAliment extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton1)
+                .addComponent(patientBt)
                 .addGap(84, 84, 84)
                 .addComponent(jLabel2)
                 .addGap(84, 84, 84)
-                .addComponent(jButton2)
+                .addComponent(dietsBt)
                 .addGap(103, 103, 103))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(63, 63, 63)
@@ -121,9 +121,9 @@ public class viewAliment extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGap(16, 16, 16)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
+                    .addComponent(patientBt)
                     .addComponent(jLabel2)
-                    .addComponent(jButton2))
+                    .addComponent(dietsBt))
                 .addGap(60, 60, 60)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
@@ -163,8 +163,7 @@ public class viewAliment extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton dietsBt;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
@@ -177,5 +176,14 @@ public class viewAliment extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
+    private javax.swing.JButton patientBt;
     // End of variables declaration//GEN-END:variables
+
+    public javax.swing.JButton getBtnPatient() {
+        return patientBt;
+    }
+    
+    public javax.swing.JButton getBtnDiet() {
+        return dietsBt;
+    }
 }

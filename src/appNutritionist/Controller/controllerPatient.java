@@ -15,7 +15,7 @@ public class controllerPatient {
         this.model=model;
         this.view=view;
         
-        view.alimentBt.addActionListener(e -> {
+        view.getBtnAliment().addActionListener(e -> {
             // 1. Cierra y libera los recursos de la vista actual
             view.dispose();
             

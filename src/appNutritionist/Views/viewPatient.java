@@ -200,8 +200,8 @@ public class viewPatient extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JButton alimentBt;
-    public javax.swing.JButton dietsBt;
+    private javax.swing.JButton alimentBt;
+    private javax.swing.JButton dietsBt;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
@@ -222,10 +222,13 @@ public class viewPatient extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField jTextField6;
     private javax.swing.JTextField jTextField8;
-    // End of variables declaration//GEN-END:variables
+// End of variables declaration//GEN-END:variables
 
-
+    public javax.swing.JButton getBtnAliment() {
+        return alimentBt;
+    }
     
-
-
+    public javax.swing.JButton getBtnDiet() {
+        return dietsBt;
+    }
 }
