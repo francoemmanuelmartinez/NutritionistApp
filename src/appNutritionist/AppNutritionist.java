@@ -2,7 +2,7 @@ package appNutritionist;
 
 import javax.swing.SwingUtilities;
 import appNutritionist.Controller.controllerPatient;
-import appNutritionist.Models.modelPatient;
+import appNutritionist.Models.Patient;
 import appNutritionist.Views.viewPatient;
 
 public class AppNutritionist {
@@ -11,7 +11,7 @@ public class AppNutritionist {
 
         SwingUtilities.invokeLater (()->{
             viewPatient vista = new viewPatient();
-            new controllerPatient(new modelPatient(),vista);
+            new controllerPatient(new Patient(),vista);
             vista.setVisible(true);
         });
     }

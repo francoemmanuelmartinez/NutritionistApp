@@ -1,5 +1,5 @@
 package appNutritionist.Models;
 
-public class modelPatient {
+public class Aliment {
     
 }

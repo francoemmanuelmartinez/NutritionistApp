@@ -1,16 +1,16 @@
 package appNutritionist.Controller;
 
-import appNutritionist.Models.modelAliment;
-import appNutritionist.Models.modelPatient;
+import appNutritionist.Models.Aliment;
+import appNutritionist.Models.Patient;
 import appNutritionist.Views.viewAliment;
 import appNutritionist.Views.viewPatient;
 
 public class controllerPatient {
     
-    private final modelPatient model;
+    private final Patient model;
     private final viewPatient view;
     
-    public controllerPatient (modelPatient model, viewPatient view)
+    public controllerPatient (Patient model, viewPatient view)
     {
         this.model=model;
         this.view=view;
@@ -22,7 +22,7 @@ public class controllerPatient {
             // 2. Inicializa la vista y el controlador de destino en el Event Dispatch Thread
             javax.swing.SwingUtilities.invokeLater(() -> {
                 viewAliment vistaAliment = new viewAliment();
-                new controllerAliment(new modelAliment(), vistaAliment);
+                new controllerAliment(new Aliment(), vistaAliment);
                 vistaAliment.setVisible(true);
             });
         });
