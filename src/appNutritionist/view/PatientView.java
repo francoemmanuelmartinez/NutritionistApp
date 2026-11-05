@@ -1,11 +1,11 @@
-package appNutritionist.Views;
+package appNutritionist.view;
 
-public class viewPatient extends javax.swing.JFrame {
+public class PatientView extends javax.swing.JFrame {
 
     /**
      * Creates new form viewPatient
      */
-    public viewPatient() {
+    public PatientView() {
         initComponents();
     }
 

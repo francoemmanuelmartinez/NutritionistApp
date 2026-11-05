@@ -1,12 +1,12 @@
-package Dao;
+package appNutritionist.dao;
 
 import java.util.List;
 
 public interface DAO<T, ID> {
 
-    void save(T entidad);
+    void insert(T entidad);
     T findById(ID id);
-    List<T> listAll();
+    List<T> findAll();
     void update(T entidad);
     void delete(ID id);
 }

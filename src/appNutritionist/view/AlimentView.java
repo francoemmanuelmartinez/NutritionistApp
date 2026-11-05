@@ -2,18 +2,18 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package appNutritionist.Views;
+package appNutritionist.view;
 
 /**
  *
  * @author games
  */
-public class viewAliment extends javax.swing.JFrame {
+public class AlimentView extends javax.swing.JFrame {
 
     /**
      * Creates new form viewAliment
      */
-    public viewAliment() {
+    public AlimentView() {
         initComponents();
     }
 
@@ -42,7 +42,6 @@ public class viewAliment extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(557, 538));
 
         jButton6.setText("Delete");
         jButton6.setName("deleteTx"); // NOI18N

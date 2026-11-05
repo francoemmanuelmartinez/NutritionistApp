@@ -2,8 +2,8 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package Dao;
-import appNutritionist.Models.Diet;
+package appNutritionist.dao;
+import appNutritionist.model.Aliment;
 import java.util.List;
 
 import javax.persistence.EntityManager;
@@ -13,23 +13,23 @@ import javax.persistence.EntityTransaction;
  *
  * @author Usuario
  */
-public class DietDAOJPA implements DietDAO {
+public class AlimentDAOJPA implements AlimentDAO {
     
     private final EntityManagerFactory emf;
 
-    public DietDAOJPA(EntityManagerFactory emf) {
+    public AlimentDAOJPA(EntityManagerFactory emf) {
         this.emf = emf;
     }
 
     @Override
-    public void save(Diet diet) {
+    public void insert(Aliment aliment) {
 
         EntityManager em = emf.createEntityManager();
         EntityTransaction tx = em.getTransaction();
 
         try {
             tx.begin();
-            em.persist(diet);
+            em.persist(aliment);
             tx.commit();
 
         } catch (RuntimeException e) {
@@ -44,12 +44,12 @@ public class DietDAOJPA implements DietDAO {
     }
 
     @Override
-    public Diet findById(Integer id) {
+    public Aliment findById(Integer id) {
 
         EntityManager em = emf.createEntityManager();
 
         try {
-            return em.find(Diet.class, id);
+            return em.find(Aliment.class, id);
 
         } finally {
             em.close();
@@ -57,13 +57,13 @@ public class DietDAOJPA implements DietDAO {
     }
 
     @Override
-    public List<Diet> listAll() {
+    public List<Aliment> findAll() {
 
         EntityManager em = emf.createEntityManager();
 
         try {
-            return em.createQuery("SELECT p FROM modelDiet p",
-                Diet.class
+            return em.createQuery("SELECT p FROM Aliment p",
+                Aliment.class
             ).getResultList();
 
         } finally {
@@ -72,14 +72,14 @@ public class DietDAOJPA implements DietDAO {
     }
 
     @Override
-    public void update(Diet diet) {
+    public void update(Aliment aliment) {
 
         EntityManager em = emf.createEntityManager();
         EntityTransaction tx = em.getTransaction();
 
         try {
             tx.begin();
-            em.merge(diet);
+            em.merge(aliment);
             tx.commit();
 
         } catch (RuntimeException e) {
@@ -102,11 +102,11 @@ public class DietDAOJPA implements DietDAO {
         try {
             tx.begin();
 
-            Diet diet =
-                em.find(Diet.class, id);
+            Aliment aliment =
+                em.find(Aliment.class, id);
 
-            if (diet != null) {
-                em.remove(diet);
+            if (aliment != null) {
+                em.remove(aliment);
             }
 
             tx.commit();

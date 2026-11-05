@@ -2,8 +2,8 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package Dao;
-import appNutritionist.Models.Aliment;
+package appNutritionist.dao;
+import appNutritionist.model.DietDetail;
 import java.util.List;
 
 import javax.persistence.EntityManager;
@@ -13,23 +13,23 @@ import javax.persistence.EntityTransaction;
  *
  * @author Usuario
  */
-public class AlimentDAOJPA implements AlimentDAO {
+public class DietDetailDAOJPA implements DietDetailDAO {
     
     private final EntityManagerFactory emf;
 
-    public AlimentDAOJPA(EntityManagerFactory emf) {
+    public DietDetailDAOJPA(EntityManagerFactory emf) {
         this.emf = emf;
     }
 
     @Override
-    public void save(Aliment aliment) {
+    public void insert(DietDetail dietDetail) {
 
         EntityManager em = emf.createEntityManager();
         EntityTransaction tx = em.getTransaction();
 
         try {
             tx.begin();
-            em.persist(aliment);
+            em.persist(dietDetail);
             tx.commit();
 
         } catch (RuntimeException e) {
@@ -44,12 +44,12 @@ public class AlimentDAOJPA implements AlimentDAO {
     }
 
     @Override
-    public Aliment findById(Integer id) {
+    public DietDetail findById(Integer id) {
 
         EntityManager em = emf.createEntityManager();
 
         try {
-            return em.find(Aliment.class, id);
+            return em.find(DietDetail.class, id);
 
         } finally {
             em.close();
@@ -57,13 +57,13 @@ public class AlimentDAOJPA implements AlimentDAO {
     }
 
     @Override
-    public List<Aliment> listAll() {
+    public List<DietDetail> findAll() {
 
         EntityManager em = emf.createEntityManager();
 
         try {
-            return em.createQuery("SELECT p FROM modelAliment p",
-                Aliment.class
+            return em.createQuery("SELECT p FROM DietDetail p",
+                DietDetail.class
             ).getResultList();
 
         } finally {
@@ -72,14 +72,14 @@ public class AlimentDAOJPA implements AlimentDAO {
     }
 
     @Override
-    public void update(Aliment aliment) {
+    public void update(DietDetail dietDetail) {
 
         EntityManager em = emf.createEntityManager();
         EntityTransaction tx = em.getTransaction();
 
         try {
             tx.begin();
-            em.merge(aliment);
+            em.merge(dietDetail);
             tx.commit();
 
         } catch (RuntimeException e) {
@@ -102,11 +102,11 @@ public class AlimentDAOJPA implements AlimentDAO {
         try {
             tx.begin();
 
-            Aliment aliment =
-                em.find(Aliment.class, id);
+            DietDetail dietDetail =
+                em.find(DietDetail.class, id);
 
-            if (aliment != null) {
-                em.remove(aliment);
+            if (dietDetail != null) {
+                em.remove(dietDetail);
             }
 
             tx.commit();

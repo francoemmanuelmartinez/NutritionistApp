@@ -1,6 +1,6 @@
-package Dao;
+package appNutritionist.dao;
 
-import appNutritionist.Models.Patient;
+import appNutritionist.model.Patient;
 import java.util.List;
 
 import javax.persistence.EntityManager;
@@ -17,7 +17,7 @@ public class PatientDAOJPA implements PatientDAO {
     }
 
     @Override
-    public void save(Patient patient) {
+    public void insert(Patient patient) {
 
         EntityManager em = emf.createEntityManager();
         EntityTransaction tx = em.getTransaction();
@@ -52,12 +52,12 @@ public class PatientDAOJPA implements PatientDAO {
     }
 
     @Override
-    public List<Patient> listAll() {
+    public List<Patient> findAll() {
 
         EntityManager em = emf.createEntityManager();
 
         try {
-            return em.createQuery("SELECT p FROM modelPatient p",
+            return em.createQuery("SELECT p FROM Patient p",
                 Patient.class
             ).getResultList();
 
